@@ -1,17 +1,17 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: whitesmoke;
-  color: black;
+  background-color: #eef2f3;
   text-align: center;
+  color: #333;
   padding: 30px;
 }
 
 .container {
-  background: white;
   display: inline-block;
   text-align: left;
-  padding: 20px 30px;
-  border-radius: 10px;
+  background: white;
+  padding: 25px 35px;
+  border-radius: 12px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
@@ -28,19 +28,20 @@ input {
 
 button {
   margin-top: 15px;
-  padding: 8px 15px;
-  background-color: rgb(3, 104, 99);
-  border: none;
+  background-color: #2196f3;
   color: white;
-  cursor: pointer;
+  border: none;
+  padding: 8px 15px;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 button:hover {
-  background-color: rgb(18, 139, 123);
+  background-color: #0b7dda;
 }
 
 .result {
   margin-top: 20px;
   font-weight: bold;
+  font-size: 18px;
 }

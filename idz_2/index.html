@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Розклад платежів</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Калькулятор розкладу платежів</h1>
+
+  <div class="container">
+    <label>Поточна сума на рахунку (грн):</label>
+    <input type="number" id="balance" min="0" placeholder="777">
+
+    <label>Поточна дата:</label>
+    <input type="date" id="currentDate">
+
+    <label>Місячний тариф (грн):</label>
+    <input type="number" id="tariff" min="1" placeholder="333">
+
+    <label>Дата списання тарифу (день місяця):</label>
+    <input type="number" id="paymentDay" min="1" max="31" placeholder="1">
+
+    <button id="calculateBtn">Розрахувати</button>
+  </div>
+
+  <div class="result" id="result"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

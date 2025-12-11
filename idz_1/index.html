@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ІДЗ - 1</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Відпустка</h1>
+
+  <div class="container">
+    <label>Дата початку:</label>
+    <input type="date" id="startDate">
+    <button class="clear-btn" onclick="clearField('startDate')">Очистити</button>
+
+    <label>Дата завершення:</label>
+    <input type="date" id="endDate">
+    <button class="clear-btn" onclick="clearField('endDate')">Очистити</button>
+
+    <label>Тривалість в днях:</label>
+    <input type="number" id="duration" min="1">
+
+    <label>Святкові дні (через кому, формат YYYY-MM-DD):</label>
+    <input type="text" id="holidays" placeholder="2026-01-01, 2026-03-08">
+
+    <button id="calculateBtn">Обчислити</button>
+  </div>
+
+  <div class="result" id="result"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
