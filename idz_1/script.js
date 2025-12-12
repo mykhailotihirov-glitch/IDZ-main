@@ -27,7 +27,7 @@ document.getElementById("calculateBtn").addEventListener("click", function() {
       }
     }
 
-    showResult(`Дата завершення: ${end.toISOString().slice(0,10)}`, end);
+    showResult("Дата завершення: " + end.toISOString().slice(0,10), end);
   }
 
   // Якщо є завершення і тривалість — рахуємо дату початку
@@ -43,7 +43,7 @@ document.getElementById("calculateBtn").addEventListener("click", function() {
       }
     }
 
-    showResult(`Дата початку: ${start.toISOString().slice(0,10)}`, start);
+    showResult("Дата початку: " + start.toISOString().slice(0,10), start);
   }
 
   // Якщо є початок і завершення — рахуємо тривалість
@@ -60,7 +60,7 @@ document.getElementById("calculateBtn").addEventListener("click", function() {
       start.setDate(start.getDate() + 1);
     }
 
-    showResult(`Тривалість: ${totalDays} днів`);
+    showResult("Тривалість: " + totalDays + " днів");
   }
 
   else {
@@ -77,8 +77,8 @@ function showResult(message, date) {
   let warning = "";
 
   if (date && date.getDay() === 0) {
-    warning = "<br> Увага: ця дата припадає на неділю!";
+    warning = "<br> Попередження: ця дата припадає на неділю.";
   }
 
-  result.innerHTML = `${message} ${warning}`;
+  result.innerHTML = message + warning;
 }

@@ -18,7 +18,7 @@ document.getElementById("calculateBtn").addEventListener("click", function() {
   nextPaymentDate.setMonth(nextPaymentDate.getMonth() + monthsCovered);
   nextPaymentDate.setDate(paymentDay);
 
-  // Якщо баланс ідеально не ділиться, то потрібно поповнити до цієї дати
+  // Якщо баланс не ділиться рівно, то потрібно поповнити до цієї дати
   if (balance % tariff !== 0) {
     result.innerHTML = `
       Балансу вистачить до <b>${nextPaymentDate.toISOString().slice(0, 10)}</b>.
