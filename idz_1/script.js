@@ -77,7 +77,7 @@ function showResult(message, date) {
   let warning = "";
 
   if (date && date.getDay() === 0) {
-    warning = "<br> Попередження: ця дата припадає на неділю.";
+    warning = "<br> Попередження: ця дата припаде на неділю.";
   }
 
   result.innerHTML = message + warning;
