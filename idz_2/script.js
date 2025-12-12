@@ -15,18 +15,16 @@ document.getElementById("calculateBtn").addEventListener("click", function() {
   // Визначаємо на скільки місяців вистачить балансу
   let monthsCovered = Math.floor(balance / tariff);
   let nextPaymentDate = new Date(currentDate);
+  // Додаємо обчислені місяці поточній дати
   nextPaymentDate.setMonth(nextPaymentDate.getMonth() + monthsCovered);
   nextPaymentDate.setDate(paymentDay);
 
   // Якщо баланс не ділиться рівно, то потрібно поповнити до цієї дати
-  if (balance % tariff !== 0) {
-    result.innerHTML = `
-      Балансу вистачить до <b>${nextPaymentDate.toISOString().slice(0, 10)}</b>.
-      <br>Потрібно поповнити рахунок до цього числа.
-    `;
-  } else {
-    result.innerHTML = `
-      Баланс вистачить рівно до <b>${nextPaymentDate.toISOString().slice(0, 10)}</b>.
-    `;
-  }
+if (balance % tariff !== 0) {
+  result.innerHTML = " Балансу вистачить до <b>" + nextPaymentDate.toISOString().slice(0, 10) 
+    + "</b>.<br>Потрібно поповнити рахунок до цього числа.";
+} else {
+  result.innerHTML = " Баланс вистачить рівно до <b>" 
+    + nextPaymentDate.toISOString().slice(0, 10) + "</b>.";
+}
 });

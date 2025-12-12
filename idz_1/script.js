@@ -9,7 +9,7 @@ document.getElementById("calculateBtn").addEventListener("click", function() {
   const holidays = holidaysInput.split(",").map(d => d.trim()).filter(Boolean);
 
   if (!startDate && !endDate && !duration) {
-    result.innerHTML = " Введіть хоча б два параметри!";
+    result.innerHTML = "Введіть хоча б два параметри.";
     return;
   }
 
