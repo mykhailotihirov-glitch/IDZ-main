@@ -11,11 +11,10 @@ document.getElementById("calculateBtn").addEventListener("click", function() {
   }
 
   let currentDate = new Date(currentDateInput);
-
   // Визначаємо на скільки місяців вистачить балансу
   let monthsCovered = Math.floor(balance / tariff);
   let nextPaymentDate = new Date(currentDate);
-  // Додаємо обчислені місяці поточній дати
+  // Додаємо обчислені місяці до поточної дати
   nextPaymentDate.setMonth(nextPaymentDate.getMonth() + monthsCovered);
   nextPaymentDate.setDate(paymentDay);
 

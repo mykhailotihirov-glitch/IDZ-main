@@ -2,7 +2,7 @@ body {
   font-family: Arial, sans-serif;
   background-color: #eef2f3;
   text-align: center;
-  color: #333;
+  color: black;
   padding: 30px;
 }
 
@@ -12,7 +12,7 @@ body {
   background: white;
   padding: 25px 35px;
   border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(32, 32, 32, 0.1);
 }
 
 label {
@@ -28,7 +28,7 @@ input {
 
 button {
   margin-top: 15px;
-  background-color: #2196f3;
+  background-color: #2292ee;
   color: white;
   border: none;
   padding: 8px 15px;
