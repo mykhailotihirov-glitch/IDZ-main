@@ -19,11 +19,15 @@ document.getElementById("calculateBtn").addEventListener("click", function() {
     let daysCounted = 0;
 
     while (daysCounted < parseInt(duration)) {
-      end.setDate(end.getDate() + 1);
       const dayString = end.toISOString().slice(0,10);
       // Пропускаємо святкові дні
       if (!holidays.includes(dayString)) {
         daysCounted++;
+      }
+      if (daysCounted < parseInt(duration)) {
+            end.setDate(end.getDate() + 1);
+      } else {
+          break; 
       }
     }
 
@@ -36,10 +40,14 @@ document.getElementById("calculateBtn").addEventListener("click", function() {
     let daysCounted = 0;
 
     while (daysCounted < parseInt(duration)) {
-      start.setDate(start.getDate() - 1);
       const dayString = start.toISOString().slice(0,10);
       if (!holidays.includes(dayString)) {
         daysCounted++;
+      }
+      if (daysCounted < parseInt(duration)) {
+            start.setDate(start.getDate() + 1);
+      } else {
+          break; 
       }
     }
 
